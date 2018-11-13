@@ -35,9 +35,6 @@
 
 (setq inhibit-startup-screen t)
 
-(setq mac-command-modifier 'meta
-      mac-option-modifier 'meta)
-
 (global-visual-line-mode 1)
 
 (tool-bar-mode -1)
@@ -246,11 +243,6 @@
 (setq visible-bell nil)
 
 (setq battery-mode-line-format "[%b%p%% %t]")
-
-(add-to-list 'default-frame-alist '(ns-transparent-titlebar . t))
-(add-to-list 'default-frame-alist '(ns-appearance . dark))
-(setq ns-use-proxy-icon  nil)
-(setq frame-title-format nil)
 
 (use-package smartparens
   :ensure t
@@ -566,10 +558,6 @@
 (setq org-todo-keywords
       '((sequence "TODO" "DOING" "|" "DONE" "BLOCKED")))
 
-(set-register ?b (cons 'file "~/Documents/org/blog.org"))
-(set-register ?t (cons 'file "~/Documents/org/todo.org"))
-(set-register ?n (cons 'file "~/Documents/org/note.org"))
-
 (with-eval-after-load 'org
   (org-babel-do-load-languages 'org-babel-load-languages '(
                                                            (ruby . t)
@@ -585,10 +573,6 @@
   (setq-default org-download-heading-lvl nil)
   (add-hook 'dired-mode-hook 'org-download-enable))
 
-(setq org-agenda-files (list "~/Documents/org/blog.org"
-                             ;; note should not have todo "~/Documents/org/note.org"
-                             "~/Documents/org/todo.org"))
-
 (use-package ox-gfm
   :ensure t
   :after ox
@@ -597,15 +581,6 @@
                         '(org-export-with-toc nil)
                         '(org-export-headline-levels 4)
                         ))
-
-(use-package plantuml-mode
-  :ensure t)
-
-(add-to-list
- 'org-src-lang-modes '("plantuml" . plantuml))
-
-;; brew install plantuml
-(setq org-plantuml-jar-path "/usr/local/Cellar/plantuml/1.2018.8/libexec/plantuml.jar")
 
 (use-package ox-reveal
   :ensure ox-reveal)

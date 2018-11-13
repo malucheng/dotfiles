@@ -1,0 +1,12 @@
+[user]
+	name = teddy
+	email = mlc880926@gmail.com
+[push]
+	default = simple
+[core]
+	excludesfile = ~/.gitignore_global
+[commit]
+    template = ~/.gitmessage
+[protocol]
+	version = 2
+

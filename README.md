@@ -4,7 +4,22 @@
 
 ## 模块
 
-### config_files
+| 模块       | 说明                  |
+|--------------|-----------------------|
+| emacs-common | 通用的 emacs 配置文件 |
+
+| emacs-linux | linux 适用的 emacs 配置           |
+| emacs-macos | macOS 适用的 emacs 配置           |
+| git-common  | 通用的 git 配置文件               |
+| git-macos   | macOS 适用的 git 配置             |
+| hammerspoon | macOS 专用的工具 hammerspoon 配置 |
+| neovim      | neovim 的配置文件                 |
+| psql        | postgresql 的命令行配置           |
+| shell       | zsh 的配置文件                    |
+| tmux        | tmux 的配置文件                   |
+
+
+### scripts
 
 这不是 dotfile, 仅仅是一些可能用到的配置文件和脚本
 
@@ -12,34 +27,15 @@
 
 不存在的文件夹, 用来存放私有的配置文件 (ssh key 等不方便放在公开仓库的信息).
 
-### emacs-common
-
-通用的 emacs 配置文件
-
-### hammerspoon
-
-macOS 下的 hammerspoon 工具的配置文件
-
-### nvim
-
-nvim 的配置文件
-
-### psql
-
-postgresql 的配置文件
-
-### shell
-
-shell 相关的配置文件
-
-### tmux
-
-tmux 的配置文件
+~/.zsh_history
+~/.ssh/id_rsa
+~/.ssh/id_rsa.pub
 
 
+```
 
-## MacOS
-```shell
+```
+
 curl --remote-name https://raw.githubusercontent.com/thoughtbot/laptop/master/mac
 sh mac 2>&1 | tee ~/laptop.log
 brew cask install dropbox

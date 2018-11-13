@@ -1,0 +1,40 @@
+***  and ⌘ are both meta key
+#+BEGIN_SRC emacs-lisp
+  (setq mac-command-modifier 'meta
+        mac-option-modifier 'meta)
+#+END_SRC
+
+*** Matching titlebar color on MacOS
+#+BEGIN_SRC emacs-lisp
+  (add-to-list 'default-frame-alist '(ns-transparent-titlebar . t))
+  (add-to-list 'default-frame-alist '(ns-appearance . dark))
+  (setq ns-use-proxy-icon  nil)
+  (setq frame-title-format nil)
+#+END_SRC
+
+** Easy open common files
+use ~C+x r j~ to jump to register, http://sachachua.com/blog/2015/02/learn-take-notes-efficiently-org-mode/
+#+BEGIN_SRC emacs-lisp
+  (set-register ?b (cons 'file "~/Documents/org/blog.org"))
+  (set-register ?t (cons 'file "~/Documents/org/todo.org"))
+  (set-register ?n (cons 'file "~/Documents/org/note.org"))
+#+END_SRC
+
+** Agenda
+#+BEGIN_SRC emacs-lisp
+  (setq org-agenda-files (list "~/Documents/org/blog.org"
+                               ;; note should not have todo "~/Documents/org/note.org"
+                               "~/Documents/org/todo.org"))
+#+END_SRC
+
+** PlantUML
+#+BEGIN_SRC emacs-lisp
+  (use-package plantuml-mode
+    :ensure t)
+
+  (add-to-list
+   'org-src-lang-modes '("plantuml" . plantuml))
+
+  ;; brew install plantuml
+  (setq org-plantuml-jar-path "/usr/local/Cellar/plantuml/1.2018.8/libexec/plantuml.jar")
+#+END_SRC
