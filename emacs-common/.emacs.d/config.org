@@ -49,11 +49,7 @@ customize settings in [[file:init.el][init.el]].
   (setq custom-file (expand-file-name "custom.el" user-emacs-directory))
   (load custom-file)
 #+end_src
-** Personal Information
-#+begin_src emacs-lisp
-  (setq user-full-name "Teddy Ma"
-        user-mail-address "mlc880926@gmail.com")
-#+end_src
+
 ** Common Preferences
 *** Don't display the help screen on startup.
 #+BEGIN_SRC emacs-lisp
@@ -182,8 +178,6 @@ Suggest next keys to me based on currently entered key combination.
     :config
     (add-hook 'after-init-hook 'which-key-mode))
 #+END_SRC
-** Better undo
-=undo-tree= visualises undo history as a tree for easy navigation.
 
 ** Easier selection
 =expand-region= expands the region around the cursor semantically depending on mode. Hard to describe but a killer feature.
