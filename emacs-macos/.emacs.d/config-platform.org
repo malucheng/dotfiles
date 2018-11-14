@@ -47,3 +47,13 @@ By default Emacs doesn't read from the same environment variables set in your te
     :config
     (exec-path-from-shell-initialize))
 #+END_SRC
+** Better undo
+ =undo-tree= visualises undo history as a tree for easy navigation.
+
+ #+BEGIN_SRC emacs-lisp
+   (use-package undo-tree
+     :ensure t
+     :diminish undo-tree-mode:
+     :config
+     (global-undo-tree-mode 1))
+ #+END_SRC
