@@ -5,6 +5,7 @@ emacs-common/.emacs.d/request
 emacs-common/.emacs.d/elpa
 emacs-common/.emacs.d/projectile.cache
 emacs-common/.emacs.d/pyim
+emacs-common/.emacs.d/url
 emacs-common/.emacs.d/recentf
 emacs-common/.emacs.d/smex-items
 emacs-common/.emacs.d/projectile-bookmarks.eld
