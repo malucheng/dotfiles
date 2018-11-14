@@ -1,8 +1,8 @@
 
 ;; ----- smex-history -----
 (
- rectangle-mark-mode
  dired
+ rectangle-mark-mode
  comment-box
  comment-line
  uncomment-region
@@ -13,7 +13,7 @@
 ;; ----- smex-data -----
 (
  (eshell . 1)
- (dired . 3)
+ (dired . 4)
  (package-list-packages . 11)
  (treemacs-projectile . 4)
  (counsel-git-grep . 1)

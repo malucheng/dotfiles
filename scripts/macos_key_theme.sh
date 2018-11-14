@@ -1,3 +1,3 @@
 xhost +SI:localuser:root
 
-sudo xkeysnail ~/dotfiles/linux/xkeysnailsrc.py
+sudo xkeysnail ~/dotfiles/scripts/xkeysnailsrc.py

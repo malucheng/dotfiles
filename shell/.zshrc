@@ -70,12 +70,6 @@ EOBUNDLES
 antigen apply
 # ================= antigen config end ===================
 
-# alias
-#alias emacs='/usr/local/bin/emacs' # brew install emacs
-alias vim='/usr/local/bin/nvim' # brew install neovim
-alias ls='/usr/local/bin/exa' # brew install exa
-alias cat='/usr/local/bin/bat' # brew install bat
-
 ## 本地静态服务器
 # alias rs="ruby -run -e httpd . -p 3000"
 
@@ -95,3 +89,7 @@ export PATH="/usr/local/bin:$PATH"
 . $HOME/.asdf/completions/asdf.bash
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+
+# alias
+source ~/.zsh_alias
