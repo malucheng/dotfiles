@@ -84,5 +84,9 @@ export HISTSIZE=20000
 
 export PATH="$HOME/.bin:$PATH"
 
+# asdf 
+. $HOME/.asdf/asdf.sh
+. $HOME/.asdf/completions/asdf.bash
+
 # alias
 source ~/.zsh_alias
