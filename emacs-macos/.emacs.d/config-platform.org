@@ -22,14 +22,6 @@
   (setq frame-title-format nil)
 #+END_SRC
 
-** Easy open common files
-use ~C+x r j~ to jump to register, http://sachachua.com/blog/2015/02/learn-take-notes-efficiently-org-mode/
-#+BEGIN_SRC emacs-lisp
-  (set-register ?b (cons 'file "~/Documents/org/blog.org"))
-  (set-register ?t (cons 'file "~/Documents/org/todo.org"))
-  (set-register ?n (cons 'file "~/Documents/org/note.org"))
-#+END_SRC
-
 ** Agenda
 #+BEGIN_SRC emacs-lisp
   (setq org-agenda-files (list "~/Documents/org/blog.org"
@@ -58,12 +50,12 @@ By default Emacs doesn't read from the same environment variables set in your te
     (exec-path-from-shell-initialize))
 #+END_SRC
 ** Better undo
- =undo-tree= visualises undo history as a tree for easy navigation.
+=undo-tree= visualises undo history as a tree for easy navigation.
 
- #+BEGIN_SRC emacs-lisp
-   (use-package undo-tree
-     :ensure t
-     :diminish undo-tree-mode:
-     :config
-     (global-undo-tree-mode 1))
- #+END_SRC
+#+BEGIN_SRC emacs-lisp
+  (use-package undo-tree
+    :ensure t
+    :diminish undo-tree-mode:
+    :config
+    (global-undo-tree-mode 1))
+#+END_SRC
